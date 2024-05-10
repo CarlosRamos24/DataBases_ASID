@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  CentroVacinacao:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: CentroVacinacao
+    ports:
+      - "3306:3306"
+  
+  Marcacao:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: Marcacoes
+    ports:
+      - "3307:3306"
+
+  Utilizador:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: Utilizador
+    ports:
+      - "3308:3306"
+    
+  Vacinas:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: Vacinas
+    ports:
+      - "3309:3306"
