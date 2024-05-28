@@ -36,3 +36,12 @@ services:
       MYSQL_DATABASE: Vacinas
     ports:
       - "3309:3306"
+
+  Vue:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: Vue
+    ports:
+      - "3310:3306"
